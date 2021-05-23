@@ -8,7 +8,7 @@ function compare({ left, right, request_id }) {
   return axios.post(SERVER_URL, {
     request_id: request_id,
     type: 'comp_result',
-    answer: array[left] < array[right],
+    answer: array[left] < array[right], //to get min: flip sign, call compute_min, and alter names in server.js
   });
 }
 

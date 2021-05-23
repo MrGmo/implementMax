@@ -7,7 +7,7 @@ app.use(express.json());
 
 const requests = [];
 
-app.use('/', async (req, res) => {
+app.post('/', async (req, res) => {
 	const { type } = req.body;
 
 	if (['compute_max', 'compute_min'].includes(type)) {
